@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 const TodoForm = ({ edit, submitTodo }) => {
   const [input, setInput] = useState(edit ? edit.text : "");
   const inpRef = useRef();
+  
   useEffect(() => {
     inpRef.current.focus();
   }, []);
@@ -10,6 +11,7 @@ const TodoForm = ({ edit, submitTodo }) => {
   const changeHandler = (e) => {
     setInput(e.target.value);
   };
+
   const submitHandler = (e) => {
     e.preventDefault();
     if (!input) {

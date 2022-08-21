@@ -11,11 +11,11 @@ const TodoList = ({ todos, onComplete, onDelete, onUpdateTodo }) => {
   };
 
   const renderTodos = () => {
-    if (todos.length === 0) {
+    if (todos?.length === 0) {
       <p>add some todos</p>;
       return;
     }
-    return todos.map((todo) => {
+    return todos?.map((todo) => {
       return (
         <Todo
           key={todo.id}

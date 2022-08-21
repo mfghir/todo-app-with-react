@@ -4,9 +4,9 @@ import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
 
 const TodoApp = () => {
+  
   const [todos, setTodos] = useState([]);
   const [filteredTodos, setFilteredTodos] = useState([]);
-
   const [selectedOption, setSelectedOption] = useState("All");
 
   useEffect(() => {
